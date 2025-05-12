@@ -31,10 +31,10 @@ class HeadsUpDisplay:
         self.hint_surface = self.text_font.render(f"ARROW KEYS TO MOVE", True, (223, 213, 88))
         self.hint_rect = self.hint_surface.get_rect(bottomright=(self.screen_width, self.screen_height))
 
-        self.player_move_surface = self.text_font.render(f"P\nL\nA\nY\nE\nR\n \nM\nO\nV\nE\nS", True, (9, 0, 136))
+        self.player_move_surface = self.text_font.render(f"P\nL\nA\nY\nE\nR\n \nM\nO\nV\nE\nS", True, "black")
         self.player_move_rect = self.player_move_surface.get_rect(center=(self.screen_width - 25, self.screen_height // 2))
 
-        self.enemy_move_surface = self.text_font.render(f"E\nN\nE\nM\nY\n \nM\nO\nV\nE\nS", True, (136, 9, 0))
+        self.enemy_move_surface = self.text_font.render(f"E\nN\nE\nM\nY\n \nM\nO\nV\nE\nS", True, "black")
         self.enemy_move_rect = self.enemy_move_surface.get_rect(center=(self.screen_width - 25, self.screen_height // 2))
 
     def start_countdown(self):

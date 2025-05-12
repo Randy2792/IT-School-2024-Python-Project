@@ -137,15 +137,16 @@ while game_running:
         screen.blit(minotaur.image, minotaur.rect)
         screen.blit(game_exit.image, game_exit.rect)
         pygame.draw.rect(screen, "black", (0, 1024, window_width, HUD_HEIGHT))
-        pygame.draw.rect(screen, (93, 93, 93), (1280, 0, HUD_WIDTH, window_height - HUD_HEIGHT))
         screen.blit(game.timer_surface, game.timer_rect)
         screen.blit(game.quit_surface, game.quit_rect)
         screen.blit(game.hint_surface, game.hint_rect)
 
         # Display turns on HUD
         if game_turn == 1:
+            pygame.draw.rect(screen, (89, 130, 255), (1280, 0, HUD_WIDTH, window_height - HUD_HEIGHT))
             screen.blit(game.player_move_surface, game.player_move_rect)
         else:
+            pygame.draw.rect(screen, (255, 89, 130), (1280, 0, HUD_WIDTH, window_height - HUD_HEIGHT))
             screen.blit(game.enemy_move_surface, game.enemy_move_rect)
 
         # Game over when enemy reaches player
